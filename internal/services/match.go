@@ -8,6 +8,13 @@ import (
 	"sync"
 )
 
+// type MatchSession struct {
+// 	PlayerA *models.Player
+// 	PlayerB *models.Player
+// 	Match   *game.Game
+// 	State   string
+// }
+
 type MatchState struct {
 	PlayerAId   string
 	PlayerAName string

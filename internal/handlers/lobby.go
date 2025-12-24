@@ -11,7 +11,7 @@ import (
 	"github.com/gorilla/websocket"
 )
 
-func wsLobbyMessageHandler(conn *websocket.Conn,) {
+func wsLobbyMessageHandler(conn *websocket.Conn, r *http.Request) {
 
 	playerID := ""
 	lobby := store.LobbyFactory()
@@ -46,5 +46,5 @@ func LobbyWebSocketHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	fmt.Printf("we have a new connection\n")
-	wsLobbyMessageHandler(conn)
+	wsLobbyMessageHandler(conn, r)
 }
